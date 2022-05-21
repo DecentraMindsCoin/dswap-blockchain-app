@@ -1,4 +1,4 @@
-{
+{ "name": "client", 
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -6,9 +6,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "ethers": "^5.6.6",
     "next": "latest",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-modal": "^3.14.4",
+    "react-spinners": "^0.11.0"
   },
   "devDependencies": {
     "@types/node": "17.0.4",
