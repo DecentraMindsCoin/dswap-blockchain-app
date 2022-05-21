@@ -1,31 +1,21 @@
-export const transactionSchema = {
-  name: "transactions",
-  title: "Transactions",
+export const userSchema = {
+  name: "users",
+  Title: "Users",
   type: "document",
   fields: [
+    { name: "address", Title: "Wallet Address", type: "string" },
+    { name: "userName", Title: "User Name", type: "string" },
     {
-      name: "txHash",
-      title: "Transaction Hash",
-    },
-    {
-      name: "fromAddress",
-      title: "From (Wallet Address)",
-      type: "string",
-    },
-    {
-      name: "toddress",
-      title: "To (Wallet Address)",
-      type: "string",
-    },
-    {
-      name: "amount",
-      title: "Amount",
-      type: "number",
-    },
-    {
-      name: "timestamp",
-      title: "Timestamp",
-      type: "datetime",
+      name: "transactions",
+      Title: "Transactions",
+      type: "array",
+      //references transactions from transactionSchema to connect their functionality an data
+      of: [
+        {
+          type: "reference",
+          to: [{ type: "transactions" }],
+        },
+      ],
     },
   ],
 };
