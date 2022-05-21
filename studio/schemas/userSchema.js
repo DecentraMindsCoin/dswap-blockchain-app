@@ -1,15 +1,22 @@
 export const userSchema = {
   name: "users",
-  Title: "Users",
+  title: "Users",
   type: "document",
   fields: [
-    { name: "address", Title: "Wallet Address", type: "string" },
-    { name: "userName", Title: "User Name", type: "string" },
+    {
+      name: "address",
+      title: "Wallet Address",
+      type: "string",
+    },
+    {
+      name: "userName",
+      title: "User Name",
+      type: "string",
+    },
     {
       name: "transactions",
-      Title: "Transactions",
+      title: "Transactions",
       type: "array",
-      //references transactions from transactionSchema to connect their functionality an data
       of: [
         {
           type: "reference",
